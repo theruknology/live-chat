@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { space } from "postcss/lib/list";
+import { Toaster } from "@/components/ui/sonner";
 
 const space_grotesk = Space_Grotesk({ subsets: ["latin"] });
 
@@ -17,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={space_grotesk.className}>{children}</body>
+      <body className={space_grotesk.className}>{children}
+        <Toaster position="top-center"/>
+      </body>
     </html>
   );
 }
