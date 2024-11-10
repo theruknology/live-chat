@@ -29,19 +29,25 @@ export default function ChatHeader({ user }: { user: User | undefined }) {
     <div className="h-20">
       <div className="p-5 h-full border-b flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-bold">Weekly Chat</h1>
+          <h1 className="text-xl font-bold">Ta'seer</h1>
           <div className="flex items-center gap-2">
-            <div className="h-4 w-4 bg-green-500 rounded-full animate-pulse"></div>
+            <div className="h-4 w-4 bg-purple-500 rounded-full animate-pulse"></div>
             <h1 className="text-sm text-gray-400">2 Online</h1>
           </div>
         </div>
 
         {user ? (
-          <Button className="bg-green-600" onClick={handleLogout}>
+          <Button
+            className="bg-purple-600 text-purple-100 font-bold"
+            onClick={handleLogout}
+          >
             Logout
           </Button>
         ) : (
-          <Button className="bg-green-600" onClick={handleLoginWithGithub}>
+          <Button
+            className="bg-purple-600 text-purple-100 font-bold"
+            onClick={handleLoginWithGithub}
+          >
             Login
           </Button>
         )}
